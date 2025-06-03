@@ -13,12 +13,34 @@ An AI-powered Mental Health Risk Assessment Tool that uses Artificial Neural Net
 - **Privacy-Focused**: All processing is done locally
 - **Professional Recommendations**: Provides appropriate guidance based on risk levels
 
-## Model Performance
+## Dataset Information
 
-The Neural Network model achieves robust performance in risk prediction:
-- High accuracy in identifying potential mental health risks
-- ROC-AUC score demonstrates strong discriminative ability
-- Balanced precision and recall for both high and low-risk cases
+The model uses data from the National Health and Nutrition Examination Survey (NHANES), which includes:
+
+### Core Components:
+1. Sleep Data (SLQ)
+   - Sleep duration and quality
+   - Sleep disorders
+   - Daytime sleepiness
+
+2. Alcohol Use Data (ALQ)
+   - Frequency of consumption
+   - Amount of consumption
+   - Binge drinking patterns
+
+3. Medical Conditions Data (MCQ)
+   - Chronic conditions
+   - Mental health diagnoses
+   - Sleep disorders
+
+### Dataset Files
+The dataset is available in the `Dataset` folder:
+- `nhanes_merged.csv`: Preprocessed and merged dataset ready for use
+- Individual NHANES component files (`.xpt` format):
+  - `SLQ_L.xpt`: Sleep data
+  - `ALQ_L.xpt`: Alcohol use data
+  - `MCQ_L.xpt`: Medical conditions
+  - And other relevant components
 
 ## Installation
 
@@ -95,6 +117,12 @@ jupyter notebook mental_health_predictor.ipynb
 - Matplotlib 3.7.1
 - Seaborn 0.12.2
 - Scikit-learn 1.2.2
+
+## Dataset Citations
+
+The NHANES dataset is provided by the National Center for Health Statistics (NCHS) and Centers for Disease Control and Prevention (CDC). When using this dataset, please cite:
+
+> National Center for Health Statistics (NCHS). National Health and Nutrition Examination Survey Data. Hyattsville, MD: U.S. Department of Health and Human Services, Centers for Disease Control and Prevention, [appropriate years for your dataset], https://wwwn.cdc.gov/nchs/nhanes/
 
 ## Contributing
 
