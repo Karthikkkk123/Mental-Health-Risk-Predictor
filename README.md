@@ -77,6 +77,20 @@ python predict.py --depression_score 12
 - `main.py` loads and merges all data, preprocesses it, trains an ANN, evaluates, saves the model, scaler, and feature list, and generates plots.
 - `predict.py` loads the trained model and scaler, takes CLI input for features, preprocesses, and predicts the risk.
 
+## PHQ-9 Self-Assessment Tool
+
+Before using the main predictor, you can calculate your PHQ-9 depression score using the included script. This helps you provide the correct input for the model.
+
+### How to Use the PHQ-9 Tool
+
+1. Run the following command:
+   ```pwsh
+   python phq9_assessment.py
+   ```
+2. Answer the 9 questions as prompted (each on a scale from 0 to 3).
+3. The script will display your total PHQ-9 score and the severity interpretation.
+4. Use this score as the `depression_score` input for the main prediction script.
+
 ## Notes
 - The dataset is large (~3GB). Make sure you have enough disk space and memory.
 - For research/educational use only. Not for clinical or diagnostic use.
